@@ -4,41 +4,40 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
-    [SerializeField] private float speed = 10f;
+    [SerializeField] private float speed = 3f;
 
-    
-    private Rigidbody2D Leon;
+    private Rigidbody2D LeonRb;
     private Vector2 moveInput;
+
+    // Referencia al Animator para controlar las animaciones
+    private Animator animator;
+
     // Start is called before the first frame update
     void Start()
     {
-        Leon = GetComponent<Rigidbody2D>();
-      
-
+        LeonRb = GetComponent<Rigidbody2D>();
+        animator = GetComponent<Animator>(); // Referencia al Animator
     }
 
     // Update is called once per frame
     void Update()
     {
-        float velocidadX = Input.GetAxisRaw("Horizontal");
+        float moveX = Input.GetAxisRaw("Horizontal");
+        float moveY = Input.GetAxisRaw("Vertical");
 
+        moveInput = new Vector2(moveX, moveY).normalized;
 
-
-        float velocidadY = Input.GetAxisRaw("Vertical");
-
-        moveInput = new Vector2(velocidadX, velocidadY).normalized;
-
-
-
-
+        animator.SetFloat("MoveX", moveX);
+        animator.SetFloat("MoveY", moveY);
+        animator.SetFloat("Speed", moveInput.sqrMagnitude);
 
 
     }
 
     private void FixedUpdate()
-
     {
-        Leon.MovePosition(Leon.position + moveInput * speed * Time.fixedDeltaTime);
-    
+        LeonRb.MovePosition(LeonRb.position + moveInput * speed * Time.fixedDeltaTime);
     }
+ 
+
 }
