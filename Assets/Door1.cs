@@ -3,14 +3,20 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-
 public class Door1 : MonoBehaviour
 {
-   private void OnTriggerEnter2D(Collider2D other)
+    public string spawnPointTag;  // El tag del punto de spawn en la nueva escena
+
+    private void OnTriggerEnter2D(Collider2D other)
     {
         if (other.CompareTag("Player"))
         {
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex +  1);
+            // Guardar el tag del punto de spawn para la próxima escena
+            PlayerPrefs.SetString("LastSpawnPoint", spawnPointTag);
+            PlayerPrefs.SetString("SpawnPoint", spawnPointTag);
+
+            // Cargar la siguiente escena
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
         }
     }
 }
