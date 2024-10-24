@@ -7,6 +7,24 @@ TagManager:
   - Door1
   - SpawnPoint1
   - SpawnPoint2
+  - SpawnPoint3
+  - SpawnPoint4
+  - SpawnPoint5
+  - SpawnPoint6
+  - SpawnPoint7
+  - SpawnPoint8
+  - SpawnPoint9
+  - SpawnPoint10
+  - SpawnPoint11
+  - SpawnPoint12
+  - SpawnPoint13
+  - SpawnPoint14
+  - SpawnPoint15
+  - SpawnPoint16
+  - SpawnPoint17
+  - SpawnPoint18
+  - SpawnPoint19
+  - SpawnPoint20
   layers:
   - Default
   - TransparentFX

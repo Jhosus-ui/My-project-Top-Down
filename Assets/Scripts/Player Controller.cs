@@ -9,6 +9,23 @@ public class PlayerController : MonoBehaviour
     private Vector2 moveInput;
     private Animator animator;
 
+    // Singleton para evitar duplicados
+    private static PlayerController instance;
+
+    void Awake()
+    {
+        // Comprobar si ya existe una instancia del personaje
+        if (instance == null)
+        {
+            instance = this;
+            DontDestroyOnLoad(gameObject); // No destruir el objeto al cambiar de escena
+        }
+        else
+        {
+            Destroy(gameObject); // Destruir duplicados
+        }
+    }
+
     void Start()
     {
         LeonRb = GetComponent<Rigidbody2D>();
@@ -33,11 +50,8 @@ public class PlayerController : MonoBehaviour
         else
         {
             // Si no hay un punto de spawn guardado, el jugador comienza en el punto inicial predeterminado.
-            // Puedes dejar el personaje en su posición inicial por defecto, o asegurarte de que comience donde prefieras.
         }
     }
-
-
 
     void Update()
     {
