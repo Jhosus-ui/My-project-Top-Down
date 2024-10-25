@@ -13,8 +13,8 @@ public class PlayerController : MonoBehaviour
 
     // Variables para el sprint
     private bool isSprinting = false;
-    private float sprintDuration = 2f; // Duración del sprint
-    private float sprintCooldown = 10f; // Tiempo de recuperación antes de volver a sprintar
+    [SerializeField] private float sprintDuration = 2f; // Duración del sprint
+    [SerializeField] private float sprintCooldown = 10f; // Tiempo de recuperación antes de volver a sprintar
     private float sprintTimer;
     private bool canSprint = true;
 
