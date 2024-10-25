@@ -4,15 +4,24 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
-    [SerializeField] private float speed = 3f;
+    [SerializeField] private float speed = 3f; // Velocidad normal
+    [SerializeField] private float sprintSpeed = 4.75f; // Velocidad al sprintar
     private Rigidbody2D LeonRb;
     private Vector2 moveInput;
     private Animator animator;
+    public bool canMove = true;
+
+    // Variables para el sprint
+    private bool isSprinting = false;
+    private float sprintDuration = 2f; // Duración del sprint
+    private float sprintCooldown = 10f; // Tiempo de recuperación antes de volver a sprintar
+    private float sprintTimer;
+    private bool canSprint = true;
 
     // Singleton para evitar duplicados
-    private static PlayerController instance;
+    public static PlayerController instance;
 
-    void Awake()
+    private void Awake()
     {
         // Comprobar si ya existe una instancia del personaje
         if (instance == null)
@@ -31,42 +40,83 @@ public class PlayerController : MonoBehaviour
         LeonRb = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>(); // Referencia al Animator
 
+        // Posición inicial del jugador
+        transform.position = new Vector2(4.16f, -0.84f); // Coordenadas iniciales
+
         // Comprobar si hay un spawn guardado en PlayerPrefs
         if (PlayerPrefs.HasKey("SpawnPoint"))
         {
-            // Buscar el objeto que tiene el tag guardado
             string spawnPointTag = PlayerPrefs.GetString("SpawnPoint");
             GameObject spawnPoint = GameObject.FindGameObjectWithTag(spawnPointTag);
 
             if (spawnPoint != null)
             {
-                // Mover al jugador al punto de spawn
                 transform.position = spawnPoint.transform.position;
-
-                // Eliminar la clave del spawn point después de usarla
                 PlayerPrefs.DeleteKey("SpawnPoint");
             }
-        }
-        else
-        {
-            // Si no hay un punto de spawn guardado, el jugador comienza en el punto inicial predeterminado.
         }
     }
 
     void Update()
     {
-        float moveX = Input.GetAxisRaw("Horizontal");
-        float moveY = Input.GetAxisRaw("Vertical");
+        if (canMove)
+        {
+            // Manejo de movimiento
+            float moveX = Input.GetAxisRaw("Horizontal");
+            float moveY = Input.GetAxisRaw("Vertical");
+            moveInput = new Vector2(moveX, moveY).normalized;
 
-        moveInput = new Vector2(moveX, moveY).normalized;
+            // Activar sprint
+            if (Input.GetKeyDown(KeyCode.LeftShift) && canSprint)
+            {
+                StartCoroutine(Sprint());
+            }
 
-        animator.SetFloat("MoveX", moveX);
-        animator.SetFloat("MoveY", moveY);
-        animator.SetFloat("Speed", moveInput.sqrMagnitude);
+            animator.SetFloat("MoveX", moveX);
+            animator.SetFloat("MoveY", moveY);
+            animator.SetFloat("Speed", moveInput.sqrMagnitude);
+        }
+        else
+        {
+            animator.SetFloat("Speed", 0f);
+        }
     }
 
     void FixedUpdate()
     {
-        LeonRb.MovePosition(LeonRb.position + moveInput * speed * Time.fixedDeltaTime);
+        if (canMove)
+        {
+            // Ajustar velocidad según si se está sprintando o no
+            float currentSpeed = isSprinting ? sprintSpeed : speed;
+            LeonRb.MovePosition(LeonRb.position + moveInput * currentSpeed * Time.fixedDeltaTime);
+        }
+    }
+
+    public void TogglePlayerMovement(bool movementStatus)
+    {
+        canMove = movementStatus;
+        Debug.Log("El estado de canMove es: " + canMove);
+    }
+
+    private IEnumerator Sprint()
+    {
+        isSprinting = true;
+        canSprint = false;
+
+        yield return new WaitForSeconds(sprintDuration);
+
+        isSprinting = false;
+        yield return new WaitForSeconds(sprintCooldown);
+        canSprint = true; // Reiniciar la habilidad de sprintar
+    }
+
+    public void ShowPickupPrompt(string itemName)
+    {
+        Debug.Log("Presiona 'E' para recoger el objeto: " + itemName);
+    }
+
+    public void HidePickupPrompt()
+    {
+        Debug.Log("Ocultar mensaje de recogida.");
     }
 }

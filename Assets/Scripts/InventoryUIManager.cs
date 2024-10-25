@@ -4,24 +4,42 @@ using UnityEngine;
 
 public class InventoryUIManager : MonoBehaviour
 {
-    // Referencia al panel del inventario
+    public static InventoryUIManager instance;
     public GameObject inventoryPanel;
-
-    // Estado actual del inventario (abierto o cerrado)
     private bool isInventoryOpen = false;
-
-    // Update is called once per frame
-    void Update()
+    private void Awake()
     {
-        // Detectar si el jugador presiona la tecla "Tab" o "i" para abrir/cerrar el inventario
-        if (Input.GetKeyDown(KeyCode.Tab) || Input.GetKeyDown(KeyCode.I))
+        if (instance == null)
         {
-            // Cambiar el estado del inventario
-            isInventoryOpen = !isInventoryOpen;
-
-            // Activar o desactivar el panel del inventario
-            inventoryPanel.SetActive(isInventoryOpen);
+            instance = this;
+            DontDestroyOnLoad(gameObject); 
+        }
+        else
+        {
+            Destroy(gameObject); 
         }
     }
-}
 
+    void Update()
+    {
+        
+        if (Input.GetKeyDown(KeyCode.Tab))
+        {
+            ToggleInventory();
+        }
+    }
+
+    public void ToggleInventory()
+    {
+        isInventoryOpen = !isInventoryOpen;
+        
+        inventoryPanel.SetActive(isInventoryOpen);
+
+        if (PlayerController.instance != null)
+        {
+            PlayerController.instance.TogglePlayerMovement(!isInventoryOpen);
+        }
+
+        Debug.Log("Inventario abierto: " + isInventoryOpen);
+    }
+}
