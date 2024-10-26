@@ -25,6 +25,7 @@ public class InventoryManager : MonoBehaviour
     public void AddItem(Item item)
     {
         inventory.Add(item);
+        InventoryUI.instance.UpdateInventoryUI(inventory); // Actualiza la UI del inventario
         Debug.Log("Ítem añadido: " + item.itemName);
     }
 }

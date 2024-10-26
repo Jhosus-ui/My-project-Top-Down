@@ -3,23 +3,25 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI; // Necesario para manejar UI
 
-public class InventoryUI : MonoBehaviour
+public class InventoryManagerUI : MonoBehaviour
 {
-    public static InventoryUI instance; // Singleton para acceder a la instancia de InventoryUI
-
+    public static InventoryManagerUI instance; // Singleton para acceder a la instancia
+    public GameObject inventoryPanel; // Panel del inventario
     public List<Image> itemSlots = new List<Image>(); // Lista de los slots del inventario
     public Sprite defaultSprite; // Imagen por defecto (vacío)
 
+    private bool isInventoryOpen = false;
+
     private void Awake()
     {
-        // Asegurarse de que solo haya una instancia de InventoryUI
         if (instance == null)
         {
             instance = this;
+            DontDestroyOnLoad(gameObject);
         }
         else
         {
-            Destroy(gameObject); // Destruir duplicados si ya existe una instancia
+            Destroy(gameObject);
         }
     }
 
@@ -32,6 +34,32 @@ public class InventoryUI : MonoBehaviour
         }
     }
 
+    void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.Tab))
+        {
+            ToggleInventory();
+        }
+    }
+
+    public void ToggleInventory()
+    {
+        isInventoryOpen = !isInventoryOpen;
+        inventoryPanel.SetActive(isInventoryOpen);
+
+        if (PlayerController.instance != null)
+        {
+            PlayerController.instance.TogglePlayerMovement(!isInventoryOpen);
+        }
+
+        if (isInventoryOpen)
+        {
+            UpdateInventoryUI(InventoryManager.instance.inventory); // Actualiza la UI cuando se abre
+        }
+
+        Debug.Log("Inventario abierto: " + isInventoryOpen);
+    }
+
     // Método para actualizar la UI cuando un ítem es añadido
     public void UpdateInventoryUI(List<Item> inventory)
     {
@@ -40,7 +68,7 @@ public class InventoryUI : MonoBehaviour
         {
             if (i < inventory.Count)
             {
-                itemSlots[i].sprite = inventory[i].icon; // Usar icon
+                itemSlots[i].sprite = inventory[i].icon; // Actualiza el slot con la imagen del ítem
             }
             else
             {
