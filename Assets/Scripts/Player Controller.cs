@@ -92,11 +92,7 @@ public class PlayerController : MonoBehaviour
         }
     }
 
-    public void TogglePlayerMovement(bool movementStatus)
-    {
-        canMove = movementStatus;
-        Debug.Log("El estado de canMove es: " + canMove);
-    }
+    
 
     private IEnumerator Sprint()
     {
@@ -110,13 +106,22 @@ public class PlayerController : MonoBehaviour
         canSprint = true; // Reiniciar la habilidad de sprintar
     }
 
-    public void ShowPickupPrompt(string itemName)
+
+
+    private List<string> keys = new List<string>(); // Lista para almacenar las llaves del jugador
+
+    public void AddKey(string keyID)
     {
-        Debug.Log("Presiona 'E' para recoger el objeto: " + itemName);
+        if (!keys.Contains(keyID)) // Evita duplicados
+        {
+            keys.Add(keyID);
+            Debug.Log("Llave añadida: " + keyID);
+        }
     }
 
-    public void HidePickupPrompt()
+    public bool HasKey(string keyID)
     {
-        Debug.Log("Ocultar mensaje de recogida.");
+        return keys.Contains(keyID); // Devuelve true si el jugador tiene la llave
     }
+
 }
