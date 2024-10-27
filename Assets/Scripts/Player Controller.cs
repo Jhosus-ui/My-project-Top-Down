@@ -41,7 +41,7 @@ public class PlayerController : MonoBehaviour
         animator = GetComponent<Animator>(); // Referencia al Animator
 
         // Posición inicial del jugador
-        transform.position = new Vector2(4.16f, -0.84f); // Coordenadas iniciales
+        //transform.position = new Vector2(4.16f, -0.84f); // Coordenadas iniciales
 
         // Comprobar si hay un spawn guardado en PlayerPrefs
         if (PlayerPrefs.HasKey("SpawnPoint"))
