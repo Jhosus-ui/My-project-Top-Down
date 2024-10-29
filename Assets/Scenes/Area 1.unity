@@ -8600,8 +8600,8 @@ MonoBehaviour:
   speed: 2.85
   sprintSpeed: 4.85
   canMove: 1
-  sprintDuration: 2
-  sprintCooldown: 7
+  sprintDuration: 3.45
+  sprintCooldown: 5.15
 --- !u!50 &1756681897
 Rigidbody2D:
   serializedVersion: 4
