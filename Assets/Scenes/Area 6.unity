@@ -1157,8 +1157,8 @@ Tilemap:
   - first: {x: -43, y: 66, z: 0}
     second:
       serializedVersion: 2
-      m_TileIndex: 28
-      m_TileSpriteIndex: 28
+      m_TileIndex: 6
+      m_TileSpriteIndex: 6
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
@@ -1167,8 +1167,8 @@ Tilemap:
   - first: {x: -42, y: 66, z: 0}
     second:
       serializedVersion: 2
-      m_TileIndex: 29
-      m_TileSpriteIndex: 29
+      m_TileIndex: 6
+      m_TileSpriteIndex: 6
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
@@ -1177,8 +1177,8 @@ Tilemap:
   - first: {x: -37, y: 66, z: 0}
     second:
       serializedVersion: 2
-      m_TileIndex: 28
-      m_TileSpriteIndex: 28
+      m_TileIndex: 6
+      m_TileSpriteIndex: 6
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
@@ -1187,8 +1187,8 @@ Tilemap:
   - first: {x: -36, y: 66, z: 0}
     second:
       serializedVersion: 2
-      m_TileIndex: 29
-      m_TileSpriteIndex: 29
+      m_TileIndex: 6
+      m_TileSpriteIndex: 6
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
@@ -1438,7 +1438,7 @@ Tilemap:
     m_Data: {fileID: 11400000, guid: a1c9a0ad78ec1084783749f6d6e74ce4, type: 2}
   - m_RefCount: 5
     m_Data: {fileID: 11400000, guid: 4da5b9af177bf2748ae923c0a2fe5183, type: 2}
-  - m_RefCount: 3
+  - m_RefCount: 7
     m_Data: {fileID: 11400000, guid: 5a536c3505b937943a9ae28597274c84, type: 2}
   - m_RefCount: 4
     m_Data: {fileID: 11400000, guid: 1c5e96ac806a3034c9bb139db8542a4a, type: 2}
@@ -1482,9 +1482,9 @@ Tilemap:
     m_Data: {fileID: 11400000, guid: 9016628d532971f4e9f3be0725b6aed5, type: 2}
   - m_RefCount: 1
     m_Data: {fileID: 11400000, guid: c9e131aa9b9162a42837d45357e0aa85, type: 2}
-  - m_RefCount: 7
+  - m_RefCount: 5
     m_Data: {fileID: 11400000, guid: 60865b9e41b3daf4fb655d86b3ca7eb3, type: 2}
-  - m_RefCount: 7
+  - m_RefCount: 5
     m_Data: {fileID: 11400000, guid: c83da5546bd70ce429875457be4ce380, type: 2}
   m_TileSpriteArray:
   - m_RefCount: 6
@@ -1499,7 +1499,7 @@ Tilemap:
     m_Data: {fileID: -931392726, guid: 0d56016ee2c81f149995ec21743d1ae9, type: 3}
   - m_RefCount: 5
     m_Data: {fileID: -1792125990, guid: 0d56016ee2c81f149995ec21743d1ae9, type: 3}
-  - m_RefCount: 3
+  - m_RefCount: 7
     m_Data: {fileID: 1668878937, guid: 0d56016ee2c81f149995ec21743d1ae9, type: 3}
   - m_RefCount: 4
     m_Data: {fileID: -1016180008, guid: 0d56016ee2c81f149995ec21743d1ae9, type: 3}
@@ -1543,9 +1543,9 @@ Tilemap:
     m_Data: {fileID: -323233627, guid: 0d56016ee2c81f149995ec21743d1ae9, type: 3}
   - m_RefCount: 1
     m_Data: {fileID: 1632171795, guid: 0d56016ee2c81f149995ec21743d1ae9, type: 3}
-  - m_RefCount: 7
+  - m_RefCount: 5
     m_Data: {fileID: 906965736, guid: 0d56016ee2c81f149995ec21743d1ae9, type: 3}
-  - m_RefCount: 7
+  - m_RefCount: 5
     m_Data: {fileID: -831434530, guid: 0d56016ee2c81f149995ec21743d1ae9, type: 3}
   m_TileMatrixArray:
   - m_RefCount: 121
@@ -7253,7 +7253,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0.0071949363, y: -0.3773989}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -7264,7 +7264,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1.78125, y: 2}
+  m_Size: {x: 1.1717979, y: 1.2452022}
   m_EdgeRadius: 0
 --- !u!82 &346916959
 AudioSource:
@@ -7278,7 +7278,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 9d73a77a06874dd47a47446c58d87b92, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.474
   m_Pitch: 1
   Loop: 1
   Mute: 0
@@ -8697,7 +8697,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0.07406232, y: -0.2550807}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -8708,7 +8708,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1.78125, y: 2}
+  m_Size: {x: 1.2628355, y: 1.4898386}
   m_EdgeRadius: 0
 --- !u!82 &522798012
 AudioSource:
@@ -8722,7 +8722,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 9d73a77a06874dd47a47446c58d87b92, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.474
   m_Pitch: 1
   Loop: 1
   Mute: 0
@@ -17919,7 +17919,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0.08233535, y: -0.2755394}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -17930,7 +17930,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1.78125, y: 2}
+  m_Size: {x: 1.027967, y: 1.4489212}
   m_EdgeRadius: 0
 --- !u!82 &749370498
 AudioSource:
@@ -17944,7 +17944,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 9d73a77a06874dd47a47446c58d87b92, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.474
   m_Pitch: 1
   Loop: 1
   Mute: 0
@@ -18975,7 +18975,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: -0.0075811744, y: -0.37153688}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -18986,7 +18986,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1.78125, y: 2}
+  m_Size: {x: 1.1390733, y: 1.2569263}
   m_EdgeRadius: 0
 --- !u!82 &1129529599
 AudioSource:
@@ -19000,7 +19000,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 9d73a77a06874dd47a47446c58d87b92, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.474
   m_Pitch: 1
   Loop: 1
   Mute: 0
@@ -74681,7 +74681,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: -0.019760221, y: -0.37205017}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -74692,7 +74692,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1.78125, y: 2}
+  m_Size: {x: 1.1094005, y: 1.2558997}
   m_EdgeRadius: 0
 --- !u!82 &1973929448
 AudioSource:
@@ -74706,7 +74706,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 9d73a77a06874dd47a47446c58d87b92, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.474
   m_Pitch: 1
   Loop: 1
   Mute: 0

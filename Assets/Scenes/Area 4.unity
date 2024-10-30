@@ -496,7 +496,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0.011813402, y: -0.23735976}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -507,7 +507,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1.78125, y: 2}
+  m_Size: {x: 1.4740887, y: 1.5252805}
   m_EdgeRadius: 0
 --- !u!82 &47185095
 AudioSource:
@@ -521,8 +521,8 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 9d73a77a06874dd47a47446c58d87b92, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 0.65
-  m_Pitch: 1
+  m_Volume: 0.381
+  m_Pitch: 0.61
   Loop: 1
   Mute: 0
   Spatialize: 0
@@ -595,7 +595,7 @@ AudioSource:
     m_Curve:
     - serializedVersion: 3
       time: 0
-      value: 1
+      value: 0.622
       inSlope: 0
       outSlope: 0
       tangentMode: 0
@@ -679,7 +679,7 @@ TilemapRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 2
+  m_SortingOrder: 1
   m_ChunkSize: {x: 32, y: 32, z: 32}
   m_ChunkCullingBounds: {x: 0, y: 0, z: 0}
   m_MaxChunkCount: 16
@@ -31888,7 +31888,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: -0.0053016543, y: -0.33785993}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -31899,7 +31899,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1.78125, y: 2}
+  m_Size: {x: 1.2085947, y: 1.3242801}
   m_EdgeRadius: 0
 --- !u!82 &366861169
 AudioSource:
@@ -31913,8 +31913,8 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 9d73a77a06874dd47a47446c58d87b92, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 0.65
-  m_Pitch: 1
+  m_Volume: 0.381
+  m_Pitch: 0.61
   Loop: 1
   Mute: 0
   Spatialize: 0
@@ -31987,7 +31987,7 @@ AudioSource:
     m_Curve:
     - serializedVersion: 3
       time: 0
-      value: 1
+      value: 0.622
       inSlope: 0
       outSlope: 0
       tangentMode: 0
@@ -32581,7 +32581,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0.0114552975, y: -0.2629724}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -32592,7 +32592,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1.78125, y: 2}
+  m_Size: {x: 1.3307741, y: 1.4740552}
   m_EdgeRadius: 0
 --- !u!82 &792378370
 AudioSource:
@@ -32606,8 +32606,8 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 9d73a77a06874dd47a47446c58d87b92, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 0.65
-  m_Pitch: 1
+  m_Volume: 0.381
+  m_Pitch: 0.61
   Loop: 1
   Mute: 0
   Spatialize: 0
@@ -32680,7 +32680,7 @@ AudioSource:
     m_Curve:
     - serializedVersion: 3
       time: 0
-      value: 1
+      value: 0.622
       inSlope: 0
       outSlope: 0
       tangentMode: 0
@@ -36446,7 +36446,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: -0.018162847, y: -0.33789113}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -36457,7 +36457,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1.78125, y: 2}
+  m_Size: {x: 1.2943676, y: 1.3242178}
   m_EdgeRadius: 0
 --- !u!82 &1245146173
 AudioSource:
@@ -36471,8 +36471,8 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 9d73a77a06874dd47a47446c58d87b92, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 0.65
-  m_Pitch: 1
+  m_Volume: 0.381
+  m_Pitch: 0.61
   Loop: 1
   Mute: 0
   Spatialize: 0
@@ -36545,7 +36545,7 @@ AudioSource:
     m_Curve:
     - serializedVersion: 3
       time: 0
-      value: 1
+      value: 0.622
       inSlope: 0
       outSlope: 0
       tangentMode: 0

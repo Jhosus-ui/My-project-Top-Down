@@ -750,6 +750,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sceneToLoad: 3
+  virtualCamera: {fileID: 0}
 --- !u!1 &1854788822
 GameObject:
   m_ObjectHideFlags: 0
@@ -1094,7 +1095,7 @@ VideoPlayer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1914408817}
   m_Enabled: 1
-  m_VideoClip: {fileID: 32900000, guid: eaec9a051c9af194c87e0231db83de28, type: 3}
+  m_VideoClip: {fileID: 32900000, guid: 8ed6cbd23bfcb3a4a8ed341b181999a2, type: 3}
   m_TargetCameraAlpha: 1
   m_TargetCamera3DLayout: 0
   m_TargetCamera: {fileID: 0}
