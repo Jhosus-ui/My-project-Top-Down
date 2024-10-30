@@ -10,11 +10,21 @@ public class DoorUnlock : MonoBehaviour
     public Sprite openDoorSprite;  // Sprite para la puerta abierta
 
     private SpriteRenderer spriteRenderer;
+    public AudioClip doorOpenSound;    // Sonido de abrir la puerta
+    public AudioClip doorLockedSound;  // Sonido de puerta bloqueada (cuando no se tiene la llave)
+    private AudioSource audioSource;   // Referencia al componente AudioSource
+
 
     private void Start()
     {
         doorCollider = GetComponent<Collider2D>(); // Obtén el collider de la puerta
         spriteRenderer = GetComponent<SpriteRenderer>(); // Obtén el SpriteRenderer para cambiar el sprite
+        audioSource = GetComponent<AudioSource>();
+        if (audioSource == null)
+        {
+            // Si no hay AudioSource, agregarlo automáticamente
+            audioSource = gameObject.AddComponent<AudioSource>();
+        }
     }
 
     private void OnTriggerEnter2D(Collider2D other)
@@ -57,5 +67,26 @@ public class DoorUnlock : MonoBehaviour
         }
 
         Debug.Log("La puerta se ha abierto. Puedes pasar.");
+    }
+
+
+        // Reproducir el sonido de abrir la puerta
+    public void PlayDoorOpenSound()
+    {
+            if (audioSource != null && doorOpenSound != null)
+            {
+                audioSource.clip = doorOpenSound;
+                audioSource.Play(); // Reproducir el sonido de abrir la puerta
+            }
+    }
+
+        // Reproducir el sonido de puerta bloqueada
+    public void PlayDoorLockedSound()
+    { 
+            if (audioSource != null && doorLockedSound != null)
+            {
+                audioSource.clip = doorLockedSound;
+                audioSource.Play(); // Reproducir el sonido de puerta bloqueada
+            }
     }
 }
