@@ -4,17 +4,15 @@ using UnityEngine;
 
 public class FadeOutAfterTime : MonoBehaviour
 {
-    public float delay = 10f; // Tiempo en segundos antes de comenzar a bajar la opacidad
-    public float fadeDuration = 2f; // Duración del desvanecimiento
+    public float delay = 10f; 
+    public float fadeDuration = 2f;
     private SpriteRenderer spriteRenderer;
     private CanvasGroup canvasGroup;
 
     private void Start()
     {
-        // Intentar obtener el SpriteRenderer (para objetos 2D)
+        
         spriteRenderer = GetComponent<SpriteRenderer>();
-
-        // Si el objeto es parte de la UI, intentamos obtener un CanvasGroup
         canvasGroup = GetComponent<CanvasGroup>();
 
         if (spriteRenderer != null || canvasGroup != null)
@@ -29,7 +27,6 @@ public class FadeOutAfterTime : MonoBehaviour
 
     IEnumerator FadeOut()
     {
-        // Esperar el tiempo antes de empezar a bajar la opacidad
         yield return new WaitForSeconds(delay);
 
         float elapsedTime = 0f;

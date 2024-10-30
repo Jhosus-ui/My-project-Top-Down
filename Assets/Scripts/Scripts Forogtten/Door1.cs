@@ -16,11 +16,11 @@ public class Door1 : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-            // Verificar si el jugador tiene la llave
+            
             PlayerController player = other.GetComponent<PlayerController>();
             if (player != null && player.HasKey(requiredKeyID))
             {
-                isLocked = false; // Desbloquear la puerta si el jugador tiene la llave
+                isLocked = false; 
                 Debug.Log("Puerta desbloqueada. Presiona E para entrar.");
             }
             else
@@ -34,12 +34,12 @@ public class Door1 : MonoBehaviour
     {
         if (other.CompareTag("Player") && Input.GetKeyDown(KeyCode.E))
         {
-            if (!isLocked) // Solo permite pasar si la puerta no está bloqueada
+            if (!isLocked) 
             {
                 if (doorSoundManager != null)
                 {
-                    doorSoundManager.spawnPointTag = spawnPointTag; // Pasar el punto de spawn al DoorSoundManager
-                    doorSoundManager.PlayDoorSoundAndChangeScene(); // Reproducir sonido y cambiar de escena
+                    doorSoundManager.spawnPointTag = spawnPointTag; 
+                    doorSoundManager.PlayDoorSoundAndChangeScene(); 
                 }
                 else
                 {

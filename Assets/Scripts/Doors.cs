@@ -4,11 +4,11 @@ using UnityEngine;
 
 public class DoorBase : MonoBehaviour
 {
-    public string spawnPointTag;      // El tag del punto de spawn en la nueva escena
-    public string requiredKeyID;      // Identificador de la llave requerida
-    public string sceneToLoad;        // Nombre de la escena a cargar
-    private bool isLocked = true;     // Estado de la puerta, inicialmente bloqueada
-    private DoorSoundManager doorSoundManager;  // Referencia al script DoorSoundManager
+    public string spawnPointTag;     
+    public string requiredKeyID;      
+    public string sceneToLoad;        
+    private bool isLocked = true;    
+    private DoorSoundManager doorSoundManager;  
 
     private void Start()
     {
@@ -19,7 +19,7 @@ public class DoorBase : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-            // Verificar si el jugador tiene la llave
+            
             PlayerController player = other.GetComponent<PlayerController>();
             if (player != null && player.HasKey(requiredKeyID))
             {
@@ -31,7 +31,7 @@ public class DoorBase : MonoBehaviour
                 Debug.Log("Necesitas la llave correcta para abrir esta puerta.");
                 if (doorSoundManager != null)
                 {
-                    doorSoundManager.PlayDoorLockedSound(); // Reproducir el sonido de puerta bloqueada
+                    doorSoundManager.PlayDoorLockedSound(); 
                 }
             }
         }
@@ -41,13 +41,13 @@ public class DoorBase : MonoBehaviour
     {
         if (other.CompareTag("Player") && Input.GetKeyDown(KeyCode.E))
         {
-            if (!isLocked) // Solo permite pasar si la puerta no está bloqueada
+            if (!isLocked) 
             {
                 if (doorSoundManager != null)
                 {
-                    doorSoundManager.spawnPointTag = spawnPointTag; // Pasar el punto de spawn al DoorSoundManager
-                    doorSoundManager.sceneToLoad = sceneToLoad;      // Pasar la escena a cargar al DoorSoundManager
-                    doorSoundManager.PlayDoorSoundAndChangeScene(); // Reproducir sonido y cambiar de escena
+                    doorSoundManager.spawnPointTag = spawnPointTag; 
+                    doorSoundManager.sceneToLoad = sceneToLoad;      
+                    doorSoundManager.PlayDoorSoundAndChangeScene(); 
                 }
                 else
                 {

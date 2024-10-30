@@ -5,8 +5,8 @@ using UnityEngine.EventSystems;
 
 public class TextHoverClickSound : MonoBehaviour, IPointerEnterHandler, IPointerClickHandler
 {
-    public AudioClip hoverSound;  // Sonido cuando el cursor pasa por encima
-    public AudioClip clickSound;  // Sonido de clic
+    public AudioClip hoverSound; 
+    public AudioClip clickSound; 
     private AudioSource audioSource;
 
     void Start()
@@ -18,7 +18,7 @@ public class TextHoverClickSound : MonoBehaviour, IPointerEnterHandler, IPointer
     // Detectar cuando el cursor pasa por encima del texto (hover)
     public void OnPointerEnter(PointerEventData eventData)
     {
-        // Reproducir el sonido de hover
+        
         if (audioSource != null && hoverSound != null)
         {
             audioSource.PlayOneShot(hoverSound);
@@ -28,7 +28,7 @@ public class TextHoverClickSound : MonoBehaviour, IPointerEnterHandler, IPointer
     // Detectar el clic en el texto
     public void OnPointerClick(PointerEventData eventData)
     {
-        // Reproducir el sonido de clic
+        
         if (audioSource != null && clickSound != null)
         {
             audioSource.PlayOneShot(clickSound);

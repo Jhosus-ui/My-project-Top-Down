@@ -4,25 +4,25 @@ using UnityEngine;
 
 public class DoorUnlock : MonoBehaviour
 {
-    public string requiredKeyID;  // Identificador de la llave requerida
-    private bool isLocked = true;  // Estado inicial de la puerta (bloqueada)
-    private Collider2D doorCollider; // Referencia al collider de la puerta
-    public Sprite openDoorSprite;  // Sprite para la puerta abierta
+    public string requiredKeyID;  
+    private bool isLocked = true;  
+    private Collider2D doorCollider; 
+    public Sprite openDoorSprite; 
 
     private SpriteRenderer spriteRenderer;
-    public AudioClip doorOpenSound;    // Sonido de abrir la puerta
-    public AudioClip doorLockedSound;  // Sonido de puerta bloqueada (cuando no se tiene la llave)
-    private AudioSource audioSource;   // Referencia al componente AudioSource
+    public AudioClip doorOpenSound;    
+    public AudioClip doorLockedSound;  
+    private AudioSource audioSource;   
 
 
     private void Start()
     {
-        doorCollider = GetComponent<Collider2D>(); // Obtén el collider de la puerta
-        spriteRenderer = GetComponent<SpriteRenderer>(); // Obtén el SpriteRenderer para cambiar el sprite
+        doorCollider = GetComponent<Collider2D>(); 
+        spriteRenderer = GetComponent<SpriteRenderer>(); 
         audioSource = GetComponent<AudioSource>();
         if (audioSource == null)
         {
-            // Si no hay AudioSource, agregarlo automáticamente
+            
             audioSource = gameObject.AddComponent<AudioSource>();
         }
     }
@@ -60,7 +60,7 @@ public class DoorUnlock : MonoBehaviour
         // Desactivar el collider para permitir el paso
         doorCollider.enabled = false;
 
-        // Cambiar el sprite de la puerta a la versión abierta
+        // Cambiar el sprite 
         if (openDoorSprite != null)
         {
             spriteRenderer.sprite = openDoorSprite;
@@ -76,7 +76,7 @@ public class DoorUnlock : MonoBehaviour
             if (audioSource != null && doorOpenSound != null)
             {
                 audioSource.clip = doorOpenSound;
-                audioSource.Play(); // Reproducir el sonido de abrir la puerta
+                audioSource.Play(); 
             }
     }
 
@@ -86,7 +86,7 @@ public class DoorUnlock : MonoBehaviour
             if (audioSource != null && doorLockedSound != null)
             {
                 audioSource.clip = doorLockedSound;
-                audioSource.Play(); // Reproducir el sonido de puerta bloqueada
+                audioSource.Play(); 
             }
     }
 }

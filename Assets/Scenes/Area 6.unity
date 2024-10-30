@@ -18073,6 +18073,7 @@ GameObject:
   - component: {fileID: 791808118}
   - component: {fileID: 791808123}
   - component: {fileID: 791808122}
+  - component: {fileID: 791808124}
   m_Layer: 0
   m_Name: Door6
   m_TagString: Untagged
@@ -18220,7 +18221,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   doorOpenSound: {fileID: 8300000, guid: 0b8ba39eb80910d42ab014136322e92c, type: 3}
   doorLockedSound: {fileID: 8300000, guid: 780a6499c5788664f8327535c8b9a33f, type: 3}
-  sceneToLoad: 'Area 7 '
+  sceneToLoad: Area 7
   spawnPointTag: SpawnPoint14
 --- !u!82 &791808123
 AudioSource:
@@ -18318,6 +18319,21 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &791808124
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 791808117}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 71074c64046e06e4fbb0a7bc73b05e6c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spawnPointTag: SpawnPoint14
+  requiredKeyID: Key_Books
+  sceneToLoad: Area 7
 --- !u!1 &793410669
 GameObject:
   m_ObjectHideFlags: 0
@@ -73455,6 +73471,7 @@ GameObject:
   - component: {fileID: 1801386198}
   - component: {fileID: 1801386203}
   - component: {fileID: 1801386202}
+  - component: {fileID: 1801386204}
   m_Layer: 0
   m_Name: Door6
   m_TagString: Untagged
@@ -73602,7 +73619,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   doorOpenSound: {fileID: 8300000, guid: 0b8ba39eb80910d42ab014136322e92c, type: 3}
   doorLockedSound: {fileID: 8300000, guid: 780a6499c5788664f8327535c8b9a33f, type: 3}
-  sceneToLoad: 'Area 7 '
+  sceneToLoad: Area 7
   spawnPointTag: SpawnPoint14
 --- !u!82 &1801386203
 AudioSource:
@@ -73700,6 +73717,21 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &1801386204
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1801386197}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 71074c64046e06e4fbb0a7bc73b05e6c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spawnPointTag: SpawnPoint14
+  requiredKeyID: Key_Books
+  sceneToLoad: Area 7
 --- !u!1 &1802942651
 GameObject:
   m_ObjectHideFlags: 0
@@ -74224,6 +74256,7 @@ GameObject:
   - component: {fileID: 1973741236}
   - component: {fileID: 1973741241}
   - component: {fileID: 1973741240}
+  - component: {fileID: 1973741242}
   m_Layer: 0
   m_Name: Door6
   m_TagString: Untagged
@@ -74371,7 +74404,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   doorOpenSound: {fileID: 8300000, guid: 0b8ba39eb80910d42ab014136322e92c, type: 3}
   doorLockedSound: {fileID: 8300000, guid: 780a6499c5788664f8327535c8b9a33f, type: 3}
-  sceneToLoad: 'Area 7 '
+  sceneToLoad: Area 7
   spawnPointTag: SpawnPoint14
 --- !u!82 &1973741241
 AudioSource:
@@ -74469,6 +74502,21 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &1973741242
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1973741235}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 71074c64046e06e4fbb0a7bc73b05e6c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spawnPointTag: SpawnPoint14
+  requiredKeyID: Key_Books
+  sceneToLoad: Area 7
 --- !u!1 &1973929440
 GameObject:
   m_ObjectHideFlags: 0

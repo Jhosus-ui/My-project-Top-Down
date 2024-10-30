@@ -14,8 +14,8 @@ public class PlayerController : MonoBehaviour
 
     // Variables para el sprint
     private bool isSprinting = false;
-    [SerializeField] private float sprintDuration = 2f; // Duración del sprint
-    [SerializeField] private float sprintCooldown = 10f; // Tiempo de recuperación antes de volver a sprintar
+    [SerializeField] private float sprintDuration = 2f; // Duración 
+    [SerializeField] private float sprintCooldown = 10f; // Tiempo 
     private float sprintTimer;
     private bool canSprint = true;
 
@@ -23,27 +23,27 @@ public class PlayerController : MonoBehaviour
     public static PlayerController instance;
 
     // Variables para sonidos
-    public AudioClip walkingSound;   // Sonido al caminar
-    public AudioClip runningSound;   // Sonido al correr
-    public AudioClip recoverySound;  // Sonido de recuperación
+    public AudioClip walkingSound;   
+    public AudioClip runningSound;   
+    public AudioClip recoverySound; 
     private AudioSource audioSource;
 
-    // Rango de velocidades para caminar, correr, y recuperación
+   
     public float recoverySpeed = 5f;  // Velocidad de recuperación
     private bool isRecovering = false;
 
 
     private void Awake()
     {
-        // Comprobar si ya existe una instancia del personaje
+        
         if (instance == null)
         {
             instance = this;
-            DontDestroyOnLoad(gameObject); // No destruir el objeto al cambiar de escena
+            DontDestroyOnLoad(gameObject);
         }
         else
         {
-            Destroy(gameObject); // Destruir duplicados
+            Destroy(gameObject);
         }
     }
 
@@ -57,7 +57,7 @@ public class PlayerController : MonoBehaviour
         PlayerPrefs.SetFloat("InitialPositionX", transform.position.x);
         PlayerPrefs.SetFloat("InitialPositionY", transform.position.y);
 
-        // Comprobar si hay un spawn guardado
+        
         if (PlayerPrefs.HasKey("SpawnPoint"))
         {
             string spawnPointTag = PlayerPrefs.GetString("SpawnPoint");
@@ -92,14 +92,14 @@ public class PlayerController : MonoBehaviour
             animator.SetFloat("MoveY", moveY);
             animator.SetFloat("Speed", moveInput.sqrMagnitude);
 
-            HandleFootstepSounds(); // Llamada para manejar los sonidos de pasos
+            HandleFootstepSounds(); 
         }
         else
         {
             animator.SetFloat("Speed", 0f);
             if (audioSource.isPlaying)
             {
-                audioSource.Stop(); // Detener sonido si el personaje se detiene
+                audioSource.Stop(); 
             }
         }
     }
@@ -148,21 +148,21 @@ public class PlayerController : MonoBehaviour
         }
         else if (currentSpeed == 0 && audioSource.isPlaying)
         {
-            audioSource.Stop(); // Detener el sonido si no hay movimiento
+            audioSource.Stop(); //Detener
         }
     }
 
-    // Función para reproducir el sonido adecuado
+    
     private void PlayFootstepSound(AudioClip soundClip)
     {
-        if (audioSource.clip != soundClip)  // Si el sonido actual no es el que se debe reproducir
+        if (audioSource.clip != soundClip)  
         {
-            audioSource.clip = soundClip;   // Asignar el nuevo sonido
-            audioSource.Play();             // Reproducir el sonido
+            audioSource.clip = soundClip;  
+            audioSource.Play();             
         }
-        else if (!audioSource.isPlaying)    // Si el sonido correcto no está reproduciéndose
+        else if (!audioSource.isPlaying)    
         {
-            audioSource.Play();             // Reproducirlo
+            audioSource.Play();             
         }
     }
 
@@ -180,7 +180,7 @@ public class PlayerController : MonoBehaviour
 
     public bool HasKey(string keyID)
     {
-        return keys.Contains(keyID); // Devuelve true si el jugador tiene la llave
+        return keys.Contains(keyID); 
     }
 
     private void OnTriggerEnter2D(Collider2D other)
@@ -195,7 +195,7 @@ public class PlayerController : MonoBehaviour
     private void GameOver()
     {
         // Cargar la escena de Game Over
-        SceneManager.LoadScene("Jumpscare"); // Asegúrate de que el nombre sea correcto
+        SceneManager.LoadScene("Jumpscare"); 
     }
 
     public void ResetPlayerPosition()

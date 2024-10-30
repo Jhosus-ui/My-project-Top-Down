@@ -8,7 +8,7 @@ public class Cambiaaescena2 : MonoBehaviour
 {
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        //check if colliding with a game object with specific tag
+        
         if (collision.gameObject.tag.Equals("door1"))
         {
             Debug.Log("change scene");

@@ -13,11 +13,11 @@ public class Door7 : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-            // Verificar si el jugador tiene la llave
+            
             PlayerController player = other.GetComponent<PlayerController>();
             if (player != null && player.HasKey(requiredKeyID))
             {
-                isLocked = false; // Desbloquear la puerta si el jugador tiene la llave
+                isLocked = false; 
                 Debug.Log("Puerta desbloqueada. Presiona E para entrar.");
             }
             else
@@ -31,14 +31,14 @@ public class Door7 : MonoBehaviour
     {
         if (other.CompareTag("Player") && Input.GetKeyDown(KeyCode.E))
         {
-            if (!isLocked) // Solo permite pasar si la puerta no está bloqueada
+            if (!isLocked) 
             {
-                // Guardar el tag del punto de spawn para la próxima escena
+                
                 PlayerPrefs.SetString("LastSpawnPoint", spawnPointTag);
                 PlayerPrefs.SetString("SpawnPoint", spawnPointTag);
 
 
-                // Cargar la siguiente escena
+                
                 SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 6);
             }
         }

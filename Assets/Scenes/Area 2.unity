@@ -3002,6 +3002,7 @@ GameObject:
   - component: {fileID: 324179950}
   - component: {fileID: 324179949}
   - component: {fileID: 324179948}
+  - component: {fileID: 324179951}
   m_Layer: 0
   m_Name: Door7
   m_TagString: Untagged
@@ -3041,7 +3042,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.47734678, y: -0.45323944}
+  m_Offset: {x: -0.0007837117, y: -0.45323944}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -3052,7 +3053,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1.9546936, y: 2.906479}
+  m_Size: {x: 0.99843234, y: 2.906479}
   m_EdgeRadius: 0
 --- !u!212 &324179946
 SpriteRenderer:
@@ -3128,7 +3129,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 324179943}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a744393fa9e31414eb097de9a2ba2b2f, type: 3}
   m_Name: 
@@ -3247,6 +3248,21 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &324179951
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 324179943}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 71074c64046e06e4fbb0a7bc73b05e6c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spawnPointTag: SpawnPoint18
+  requiredKeyID: Key_North
+  sceneToLoad: Area 8
 --- !u!1 &336173944
 GameObject:
   m_ObjectHideFlags: 0
@@ -10388,6 +10404,7 @@ GameObject:
   - component: {fileID: 716873291}
   - component: {fileID: 716873290}
   - component: {fileID: 716873289}
+  - component: {fileID: 716873293}
   m_Layer: 0
   m_Name: Door3 (2)
   m_TagString: Untagged
@@ -10521,6 +10538,22 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &716873293
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 716873288}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 53beedc931078574c9a6e45930d7053d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  doorOpenSound: {fileID: 8300000, guid: 0b8ba39eb80910d42ab014136322e92c, type: 3}
+  doorLockedSound: {fileID: 8300000, guid: 780a6499c5788664f8327535c8b9a33f, type: 3}
+  sceneToLoad: Area 6
+  spawnPointTag: SpawnPoint8
 --- !u!1 &721398740
 GameObject:
   m_ObjectHideFlags: 0
@@ -10535,6 +10568,7 @@ GameObject:
   - component: {fileID: 721398747}
   - component: {fileID: 721398746}
   - component: {fileID: 721398745}
+  - component: {fileID: 721398748}
   m_Layer: 0
   m_Name: Door3
   m_TagString: Untagged
@@ -10627,7 +10661,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 3
+  m_SortingOrder: 2
   m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
   m_Color: {r: 0.8207547, g: 0.75362235, b: 0.70848167, a: 1}
   m_FlipX: 0
@@ -10773,13 +10807,28 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 721398740}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a744393fa9e31414eb097de9a2ba2b2f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   spawnPointTag: SpawnPoint8
   requiredKeyID: Key_East
+--- !u!114 &721398748
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 721398740}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 71074c64046e06e4fbb0a7bc73b05e6c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spawnPointTag: SpawnPoint8
+  requiredKeyID: Key_East
+  sceneToLoad: Area 4
 --- !u!1 &769379350
 GameObject:
   m_ObjectHideFlags: 0
@@ -14439,6 +14488,7 @@ GameObject:
   - component: {fileID: 928217307}
   - component: {fileID: 928217306}
   - component: {fileID: 928217305}
+  - component: {fileID: 928217308}
   m_Layer: 0
   m_Name: Door7
   m_TagString: Untagged
@@ -14478,7 +14528,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.5002318, y: -0.4706726}
+  m_Offset: {x: 0.01036337, y: -0.4706726}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -14489,7 +14539,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 2.0004635, y: 2.9413452}
+  m_Size: {x: 1.0207267, y: 2.9413452}
   m_EdgeRadius: 0
 --- !u!114 &928217302
 MonoBehaviour:
@@ -14691,13 +14741,28 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 928217300}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a744393fa9e31414eb097de9a2ba2b2f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   spawnPointTag: SpawnPoint17
   requiredKeyID: Key_North
+--- !u!114 &928217308
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 928217300}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 71074c64046e06e4fbb0a7bc73b05e6c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spawnPointTag: SpawnPoint17
+  requiredKeyID: Key_North
+  sceneToLoad: Area 8
 --- !u!1 &932354557
 GameObject:
   m_ObjectHideFlags: 0
@@ -14870,6 +14935,7 @@ GameObject:
   - component: {fileID: 1151051572}
   - component: {fileID: 1151051571}
   - component: {fileID: 1151051570}
+  - component: {fileID: 1151051573}
   m_Layer: 0
   m_Name: Door7
   m_TagString: Untagged
@@ -14909,7 +14975,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.52357566, y: -0.44660187}
+  m_Offset: {x: -0.0020823777, y: -0.44660187}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -14920,7 +14986,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 2.047151, y: 2.8932037}
+  m_Size: {x: 0.9958352, y: 2.8932037}
   m_EdgeRadius: 0
 --- !u!212 &1151051568
 SpriteRenderer:
@@ -14996,7 +15062,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1151051565}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a744393fa9e31414eb097de9a2ba2b2f, type: 3}
   m_Name: 
@@ -15115,6 +15181,21 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &1151051573
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1151051565}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 71074c64046e06e4fbb0a7bc73b05e6c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spawnPointTag: SpawnPoint18
+  requiredKeyID: Key_North
+  sceneToLoad: Area 8
 --- !u!1 &1178581458
 GameObject:
   m_ObjectHideFlags: 0
@@ -17036,6 +17117,7 @@ GameObject:
   - component: {fileID: 1677873551}
   - component: {fileID: 1677873550}
   - component: {fileID: 1677873549}
+  - component: {fileID: 1677873552}
   m_Layer: 0
   m_Name: Door7
   m_TagString: Untagged
@@ -17075,7 +17157,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.46461755, y: -0.47938728}
+  m_Offset: {x: 0.007832229, y: -0.47938728}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -17086,7 +17168,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1.9292349, y: 2.9587746}
+  m_Size: {x: 1.0156645, y: 2.9587746}
   m_EdgeRadius: 0
 --- !u!212 &1677873547
 SpriteRenderer:
@@ -17162,7 +17244,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1677873544}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a744393fa9e31414eb097de9a2ba2b2f, type: 3}
   m_Name: 
@@ -17184,7 +17266,7 @@ MonoBehaviour:
   doorOpenSound: {fileID: 8300000, guid: 0b8ba39eb80910d42ab014136322e92c, type: 3}
   doorLockedSound: {fileID: 8300000, guid: 780a6499c5788664f8327535c8b9a33f, type: 3}
   sceneToLoad: Area 8
-  spawnPointTag: 
+  spawnPointTag: SpawnPoint17
 --- !u!82 &1677873551
 AudioSource:
   m_ObjectHideFlags: 0
@@ -17281,6 +17363,21 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &1677873552
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1677873544}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 71074c64046e06e4fbb0a7bc73b05e6c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spawnPointTag: SpawnPoint17
+  requiredKeyID: Key_North
+  sceneToLoad: Area 8
 --- !u!1 &1800560781
 GameObject:
   m_ObjectHideFlags: 0
@@ -17293,6 +17390,7 @@ GameObject:
   - component: {fileID: 1800560784}
   - component: {fileID: 1800560783}
   - component: {fileID: 1800560782}
+  - component: {fileID: 1800560786}
   m_Layer: 0
   m_Name: Door3 (1)
   m_TagString: Untagged
@@ -17426,6 +17524,22 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1800560786
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1800560781}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 53beedc931078574c9a6e45930d7053d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  doorOpenSound: {fileID: 8300000, guid: 0b8ba39eb80910d42ab014136322e92c, type: 3}
+  doorLockedSound: {fileID: 8300000, guid: 780a6499c5788664f8327535c8b9a33f, type: 3}
+  sceneToLoad: Area 8
+  spawnPointTag: SpawnPoint8
 --- !u!1 &1850484898
 GameObject:
   m_ObjectHideFlags: 0
@@ -17959,6 +18073,7 @@ GameObject:
   - component: {fileID: 1974969668}
   - component: {fileID: 1974969667}
   - component: {fileID: 1974969666}
+  - component: {fileID: 1974969669}
   m_Layer: 0
   m_Name: Door5
   m_TagString: Untagged
@@ -18006,7 +18121,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 8
+  m_SortingOrder: 2
   m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
   m_Color: {r: 0.69411767, g: 0.4666667, b: 0.3137255, a: 1}
   m_FlipX: 0
@@ -18197,13 +18312,28 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1974969661}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a744393fa9e31414eb097de9a2ba2b2f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   spawnPointTag: SpawnPoint12
   requiredKeyID: Key_West
+--- !u!114 &1974969669
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1974969661}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 71074c64046e06e4fbb0a7bc73b05e6c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spawnPointTag: SpawnPoint12
+  requiredKeyID: Key_West
+  sceneToLoad: Area 6
 --- !u!1 &2061320287
 GameObject:
   m_ObjectHideFlags: 0

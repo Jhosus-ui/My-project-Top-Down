@@ -4,13 +4,13 @@ using UnityEngine;
 
 public class Key : MonoBehaviour
 {
-    public string keyID; // Identificador único para la llave
-    public AudioClip pickUpSound; // Sonido al recoger la llave
-    private AudioSource audioSource; // Referencia al AudioSource
+    public string keyID; // Identificador 
+    public AudioClip pickUpSound; // Sonido 
+    private AudioSource audioSource; 
 
     private void Start()
     {
-        audioSource = GetComponent<AudioSource>(); // Obtener el componente AudioSource
+        audioSource = GetComponent<AudioSource>(); 
     }
 
     private void OnTriggerEnter2D(Collider2D other)
@@ -28,8 +28,8 @@ public class Key : MonoBehaviour
             PlayerController player = other.GetComponent<PlayerController>();
             if (player != null)
             {
-                player.AddKey(keyID); // Añadir la llave al inventario del jugador
-                PlayPickUpSound(); // Reproducir el sonido al recoger
+                player.AddKey(keyID); 
+                PlayPickUpSound(); 
             }
         }
     }
@@ -38,12 +38,12 @@ public class Key : MonoBehaviour
     {
         if (pickUpSound != null)
         {
-            audioSource.PlayOneShot(pickUpSound); // Reproducir el sonido de recogida
-            Destroy(gameObject, pickUpSound.length); // Destruir la llave después de que el sonido termine
+            audioSource.PlayOneShot(pickUpSound); 
+            Destroy(gameObject, pickUpSound.length); 
         }
         else
         {
-            Destroy(gameObject); // Si no hay sonido, destruir inmediatamente
+            Destroy(gameObject); 
         }
     }
 }

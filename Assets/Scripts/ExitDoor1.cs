@@ -5,13 +5,13 @@ using UnityEngine.SceneManagement;
 
 public class ExitDoor1 : MonoBehaviour
 {
-    public string spawnPointTag;  // El tag del punto de spawn en la escena anterior
+    public string spawnPointTag;  // El tag del punto de spawn 
 
     private void OnTriggerEnter2D(Collider2D other)
     {
         if (other.CompareTag("Player"))
         {
-            // Guardar el tag del punto de spawn para la próxima escena
+            // Guardar el tag del punto de spawn
             PlayerPrefs.SetString("LastSpawnPoint", spawnPointTag);
             PlayerPrefs.SetString("SpawnPoint", spawnPointTag);
 
