@@ -12,6 +12,9 @@ EditorBuildSettings:
     path: Assets/Scenes/Instructions.unity
     guid: 61d217165240c4b43957b40f5080c7f9
   - enabled: 1
+    path: Assets/Scenes/Introduccion 1.unity
+    guid: 370e7c1f3b8fe0c419cae301a229c9b4
+  - enabled: 1
     path: Assets/Scenes/Area 1.unity
     guid: a28f1562b05c49e43ba8de0370d62dbf
   - enabled: 1
@@ -38,4 +41,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Area 9.unity
     guid: 5cebdd36f6f7306458ae58443f4ef3a1
+  - enabled: 1
+    path: Assets/Scenes/Jumpscare.unity
+    guid: 82778a6465ff63443a390410317aa408
+  - enabled: 1
+    path: Assets/Scenes/Final.unity
+    guid: b0372564c03709541b6fdd743f139b25
   m_configObjects: {}

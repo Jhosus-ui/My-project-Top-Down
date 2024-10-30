@@ -1,13 +1,16 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 
 public class Door1 : MonoBehaviour
 {
-    public string spawnPointTag;  // El tag del punto de spawn en la nueva escena
-    public string requiredKeyID;   // Identificador de la llave requerida
-    private bool isLocked = true;   // Estado de la puerta, inicialmente bloqueada
+    public string spawnPointTag;      // El tag del punto de spawn en la nueva escena
+    public string requiredKeyID;      // Identificador de la llave requerida
+    private bool isLocked = true;     // Estado de la puerta, inicialmente bloqueada
+    private DoorSoundManager doorSoundManager;  // Referencia al script DoorSoundManager
+
+    private void Start()
+    {
+        doorSoundManager = GetComponent<DoorSoundManager>();
+    }
 
     private void OnTriggerEnter2D(Collider2D other)
     {
@@ -33,12 +36,15 @@ public class Door1 : MonoBehaviour
         {
             if (!isLocked) // Solo permite pasar si la puerta no está bloqueada
             {
-                // Guardar el tag del punto de spawn para la próxima escena
-                PlayerPrefs.SetString("LastSpawnPoint", spawnPointTag);
-                PlayerPrefs.SetString("SpawnPoint", spawnPointTag);
-
-                // Cargar la siguiente escena
-                SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+                if (doorSoundManager != null)
+                {
+                    doorSoundManager.spawnPointTag = spawnPointTag; // Pasar el punto de spawn al DoorSoundManager
+                    doorSoundManager.PlayDoorSoundAndChangeScene(); // Reproducir sonido y cambiar de escena
+                }
+                else
+                {
+                    Debug.LogWarning("DoorSoundManager no asignado.");
+                }
             }
         }
     }

@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerController : MonoBehaviour
 {
@@ -21,6 +22,17 @@ public class PlayerController : MonoBehaviour
     // Singleton para evitar duplicados
     public static PlayerController instance;
 
+    // Variables para sonidos
+    public AudioClip walkingSound;   // Sonido al caminar
+    public AudioClip runningSound;   // Sonido al correr
+    public AudioClip recoverySound;  // Sonido de recuperación
+    private AudioSource audioSource;
+
+    // Rango de velocidades para caminar, correr, y recuperación
+    public float recoverySpeed = 5f;  // Velocidad de recuperación
+    private bool isRecovering = false;
+
+
     private void Awake()
     {
         // Comprobar si ya existe una instancia del personaje
@@ -38,12 +50,14 @@ public class PlayerController : MonoBehaviour
     void Start()
     {
         LeonRb = GetComponent<Rigidbody2D>();
-        animator = GetComponent<Animator>(); // Referencia al Animator
+        animator = GetComponent<Animator>();
+        audioSource = GetComponent<AudioSource>();
 
-        // Posición inicial del jugador
-        //transform.position = new Vector2(4.16f, -0.84f); // Coordenadas iniciales
+        // Guardar la posición inicial en PlayerPrefs
+        PlayerPrefs.SetFloat("InitialPositionX", transform.position.x);
+        PlayerPrefs.SetFloat("InitialPositionY", transform.position.y);
 
-        // Comprobar si hay un spawn guardado en PlayerPrefs
+        // Comprobar si hay un spawn guardado
         if (PlayerPrefs.HasKey("SpawnPoint"))
         {
             string spawnPointTag = PlayerPrefs.GetString("SpawnPoint");
@@ -56,6 +70,8 @@ public class PlayerController : MonoBehaviour
             }
         }
     }
+
+
 
     void Update()
     {
@@ -75,10 +91,16 @@ public class PlayerController : MonoBehaviour
             animator.SetFloat("MoveX", moveX);
             animator.SetFloat("MoveY", moveY);
             animator.SetFloat("Speed", moveInput.sqrMagnitude);
+
+            HandleFootstepSounds(); // Llamada para manejar los sonidos de pasos
         }
         else
         {
             animator.SetFloat("Speed", 0f);
+            if (audioSource.isPlaying)
+            {
+                audioSource.Stop(); // Detener sonido si el personaje se detiene
+            }
         }
     }
 
@@ -92,8 +114,6 @@ public class PlayerController : MonoBehaviour
         }
     }
 
-    
-
     private IEnumerator Sprint()
     {
         isSprinting = true;
@@ -102,12 +122,51 @@ public class PlayerController : MonoBehaviour
         yield return new WaitForSeconds(sprintDuration);
 
         isSprinting = false;
+        isRecovering = true; // Entra en fase de recuperación
+
         yield return new WaitForSeconds(sprintCooldown);
         canSprint = true; // Reiniciar la habilidad de sprintar
+        isRecovering = false; // Recuperación completada
     }
 
+    // Manejar sonidos de pasos y correr
+    private void HandleFootstepSounds()
+    {
+        float currentSpeed = moveInput.magnitude;  // Obtener la velocidad actual del personaje
 
+        if (isRecovering)
+        {
+            PlayFootstepSound(recoverySound); // Sonido de recuperación
+        }
+        else if (isSprinting)
+        {
+            PlayFootstepSound(runningSound); // Sonido de correr
+        }
+        else if (currentSpeed > 0 && !isSprinting) // Está caminando
+        {
+            PlayFootstepSound(walkingSound); // Sonido de caminar
+        }
+        else if (currentSpeed == 0 && audioSource.isPlaying)
+        {
+            audioSource.Stop(); // Detener el sonido si no hay movimiento
+        }
+    }
 
+    // Función para reproducir el sonido adecuado
+    private void PlayFootstepSound(AudioClip soundClip)
+    {
+        if (audioSource.clip != soundClip)  // Si el sonido actual no es el que se debe reproducir
+        {
+            audioSource.clip = soundClip;   // Asignar el nuevo sonido
+            audioSource.Play();             // Reproducir el sonido
+        }
+        else if (!audioSource.isPlaying)    // Si el sonido correcto no está reproduciéndose
+        {
+            audioSource.Play();             // Reproducirlo
+        }
+    }
+
+    // Funciones para manejar llaves
     private List<string> keys = new List<string>(); // Lista para almacenar las llaves del jugador
 
     public void AddKey(string keyID)
@@ -122,6 +181,27 @@ public class PlayerController : MonoBehaviour
     public bool HasKey(string keyID)
     {
         return keys.Contains(keyID); // Devuelve true si el jugador tiene la llave
+    }
+
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.CompareTag("Enemy"))
+        {
+            // Llamar a la función que maneja el Game Over
+            GameOver();
+        }
+    }
+
+    private void GameOver()
+    {
+        // Cargar la escena de Game Over
+        SceneManager.LoadScene("Jumpscare"); // Asegúrate de que el nombre sea correcto
+    }
+
+    public void ResetPlayerPosition()
+    {
+        // Establecer la posición inicial del jugador
+        transform.position = new Vector2(PlayerPrefs.GetFloat("InitialPositionX"), PlayerPrefs.GetFloat("InitialPositionY"));
     }
 
 }
