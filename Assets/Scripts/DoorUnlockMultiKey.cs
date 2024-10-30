@@ -4,16 +4,15 @@ using UnityEngine;
 
 public class DoorUnlockMultiKey : MonoBehaviour
 {
-    public string[] requiredKeys;  
-    private bool isLocked = true;  
-    private Collider2D doorCollider; 
-    public Sprite openDoorSprite;  
+    public string[] requiredKeys;
+    private Collider2D doorCollider;
+    public Sprite openDoorSprite;
     private SpriteRenderer spriteRenderer;
 
     private void Start()
     {
-        doorCollider = GetComponent<Collider2D>();  
-        spriteRenderer = GetComponent<SpriteRenderer>();  
+        doorCollider = GetComponent<Collider2D>();
+        spriteRenderer = GetComponent<SpriteRenderer>();
     }
 
     private void OnTriggerEnter2D(Collider2D other)
@@ -22,11 +21,10 @@ public class DoorUnlockMultiKey : MonoBehaviour
         {
             PlayerController player = other.GetComponent<PlayerController>();
 
-            
             if (player != null && HasAllKeys(player))
             {
-                isLocked = false;  
-                Debug.Log("Puerta desbloqueada. Presiona E para abrir.");
+                OpenDoor();
+                Debug.Log("Puerta desbloqueada. Puedes pasar.");
             }
             else
             {
@@ -35,41 +33,27 @@ public class DoorUnlockMultiKey : MonoBehaviour
         }
     }
 
-    private void OnTriggerStay2D(Collider2D other)
-    {
-        if (other.CompareTag("Player") && Input.GetKeyDown(KeyCode.E))
-        {
-            if (!isLocked)
-            {
-                OpenDoor();  
-            }
-        }
-    }
-
-    
     private bool HasAllKeys(PlayerController player)
     {
         foreach (string keyID in requiredKeys)
         {
-            if (!player.HasKey(keyID)) 
+            if (!player.HasKey(keyID))
             {
                 return false;
             }
         }
-        return true;  
+        return true;
     }
 
     private void OpenDoor()
     {
-        
+        // Desactivar el collider de la puerta para permitir el paso
         doorCollider.enabled = false;
 
-        
+        // Cambiar el sprite de la puerta a la versión abierta
         if (openDoorSprite != null)
         {
             spriteRenderer.sprite = openDoorSprite;
         }
-
-        Debug.Log("La puerta se ha abierto. Puedes pasar.");
     }
 }

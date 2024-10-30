@@ -7253,7 +7253,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.0071949363, y: -0.3773989}
+  m_Offset: {x: 0.0071949065, y: -0.1243155}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -7264,7 +7264,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1.1717979, y: 1.2452022}
+  m_Size: {x: 1.5787656, y: 1.751369}
   m_EdgeRadius: 0
 --- !u!82 &346916959
 AudioSource:
@@ -8697,7 +8697,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.07406232, y: -0.2550807}
+  m_Offset: {x: 0.040148318, y: -0.15773982}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -8708,7 +8708,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1.2628355, y: 1.4898386}
+  m_Size: {x: 1.4324023, y: 1.6845204}
   m_EdgeRadius: 0
 --- !u!82 &522798012
 AudioSource:
@@ -17919,7 +17919,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.08233535, y: -0.2755394}
+  m_Offset: {x: -0.005456805, y: -0.07988384}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -17930,7 +17930,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1.027967, y: 1.4489212}
+  m_Size: {x: 1.6373551, y: 1.8402324}
   m_EdgeRadius: 0
 --- !u!82 &749370498
 AudioSource:
@@ -18070,7 +18070,6 @@ GameObject:
   - component: {fileID: 791808121}
   - component: {fileID: 791808120}
   - component: {fileID: 791808119}
-  - component: {fileID: 791808118}
   - component: {fileID: 791808123}
   - component: {fileID: 791808122}
   - component: {fileID: 791808124}
@@ -18081,20 +18080,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &791808118
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 791808117}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a744393fa9e31414eb097de9a2ba2b2f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  spawnPointTag: SpawnPoint14
-  requiredKeyID: Key_Books
 --- !u!61 &791808119
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -18889,7 +18874,7 @@ MonoBehaviour:
   - {fileID: 1957723419}
   - {fileID: 1678949585}
   - {fileID: 512356319}
-  detectionRange: 4
+  detectionRange: 3
   loseRange: 7
   speed: 2.67
 --- !u!212 &1129529596
@@ -18991,7 +18976,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.0075811744, y: -0.37153688}
+  m_Offset: {x: -0.06029156, y: -0.1299066}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -19002,7 +18987,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1.1390733, y: 1.2569263}
+  m_Size: {x: 1.5892825, y: 1.7401868}
   m_EdgeRadius: 0
 --- !u!82 &1129529599
 AudioSource:
@@ -20701,8 +20686,8 @@ CapsuleCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.07001285, y: -15.176496}
-  m_Size: {x: 12.324736, y: 43.952065}
+  m_Offset: {x: -5.9631085, y: -8.459628}
+  m_Size: {x: 28.49336, y: 57.385864}
   m_Direction: 0
 --- !u!212 &1496337996
 SpriteRenderer:
@@ -73468,7 +73453,6 @@ GameObject:
   - component: {fileID: 1801386201}
   - component: {fileID: 1801386200}
   - component: {fileID: 1801386199}
-  - component: {fileID: 1801386198}
   - component: {fileID: 1801386203}
   - component: {fileID: 1801386202}
   - component: {fileID: 1801386204}
@@ -73479,20 +73463,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1801386198
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1801386197}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a744393fa9e31414eb097de9a2ba2b2f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  spawnPointTag: SpawnPoint14
-  requiredKeyID: Key_Books
 --- !u!61 &1801386199
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -74253,7 +74223,6 @@ GameObject:
   - component: {fileID: 1973741239}
   - component: {fileID: 1973741238}
   - component: {fileID: 1973741237}
-  - component: {fileID: 1973741236}
   - component: {fileID: 1973741241}
   - component: {fileID: 1973741240}
   - component: {fileID: 1973741242}
@@ -74264,20 +74233,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1973741236
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1973741235}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a744393fa9e31414eb097de9a2ba2b2f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  spawnPointTag: SpawnPoint14
-  requiredKeyID: Key_Books
 --- !u!61 &1973741237
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -74729,7 +74684,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.019760221, y: -0.37205017}
+  m_Offset: {x: -0.0024297833, y: -0.12335962}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -74740,7 +74695,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1.1094005, y: 1.2558997}
+  m_Size: {x: 1.5253054, y: 1.7532808}
   m_EdgeRadius: 0
 --- !u!82 &1973929448
 AudioSource:

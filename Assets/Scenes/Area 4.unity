@@ -496,7 +496,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.011813402, y: -0.23735976}
+  m_Offset: {x: -0.024141252, y: -0.15480638}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -507,7 +507,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1.4740887, y: 1.5252805}
+  m_Size: {x: 1.545998, y: 1.6903872}
   m_EdgeRadius: 0
 --- !u!82 &47185095
 AudioSource:
@@ -31938,7 +31938,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.0053016543, y: -0.33785993}
+  m_Offset: {x: -0.08555353, y: -0.10440838}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -31949,7 +31949,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1.2085947, y: 1.3242801}
+  m_Size: {x: 1.6387506, y: 1.7911832}
   m_EdgeRadius: 0
 --- !u!82 &366861169
 AudioSource:
@@ -32631,7 +32631,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.0114552975, y: -0.2629724}
+  m_Offset: {x: 0.030755699, y: -0.17987919}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -32642,7 +32642,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1.3307741, y: 1.4740552}
+  m_Size: {x: 1.5623788, y: 1.6402416}
   m_EdgeRadius: 0
 --- !u!82 &792378370
 AudioSource:
@@ -32837,8 +32837,8 @@ CapsuleCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.26568803, y: -10.572944}
-  m_Size: {x: 19.063622, y: 37.707478}
+  m_Offset: {x: -0.34248856, y: -10.572966}
+  m_Size: {x: 23.1109, y: 37.70749}
   m_Direction: 0
 --- !u!212 &948935745
 SpriteRenderer:
@@ -36496,7 +36496,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.018162847, y: -0.33789113}
+  m_Offset: {x: 0.009137303, y: -0.1626296}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -36507,7 +36507,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1.2943676, y: 1.3242178}
+  m_Size: {x: 1.5864365, y: 1.6747408}
   m_EdgeRadius: 0
 --- !u!82 &1245146173
 AudioSource:
@@ -40851,7 +40851,6 @@ GameObject:
   - component: {fileID: 1772281686}
   - component: {fileID: 1772281685}
   - component: {fileID: 1772281687}
-  - component: {fileID: 1772281690}
   - component: {fileID: 1772281689}
   - component: {fileID: 1772281688}
   - component: {fileID: 1772281691}
@@ -41086,20 +41085,6 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!114 &1772281690
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1772281683}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a744393fa9e31414eb097de9a2ba2b2f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  spawnPointTag: SpawnPoint10
-  requiredKeyID: Key_small2
 --- !u!114 &1772281691
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -41210,7 +41195,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   requiredKeyID: Key_small
-  openDoorSprite: {fileID: 0}
+  openDoorSprite: {fileID: -1723918477, guid: 0d56016ee2c81f149995ec21743d1ae9, type: 3}
   doorOpenSound: {fileID: 8300000, guid: 0b8ba39eb80910d42ab014136322e92c, type: 3}
   doorLockedSound: {fileID: 8300000, guid: 780a6499c5788664f8327535c8b9a33f, type: 3}
 --- !u!61 &1834673518
@@ -42540,8 +42525,8 @@ CapsuleCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.12720312, y: -2.3187149}
-  m_Size: {x: 2.7448134, y: 10.074387}
+  m_Offset: {x: 0.2941285, y: -2.3187299}
+  m_Size: {x: 4.7026997, y: 10.0743885}
   m_Direction: 0
 --- !u!212 &1900501383
 SpriteRenderer:
@@ -42819,7 +42804,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   requiredKeyID: DARK1
-  openDoorSprite: {fileID: 0}
+  openDoorSprite: {fileID: -1723918477, guid: 0d56016ee2c81f149995ec21743d1ae9, type: 3}
   doorOpenSound: {fileID: 8300000, guid: 0b8ba39eb80910d42ab014136322e92c, type: 3}
   doorLockedSound: {fileID: 8300000, guid: 780a6499c5788664f8327535c8b9a33f, type: 3}
 --- !u!212 &2096353564
